@@ -1,0 +1,42 @@
+{
+    "vinho1": {
+        "nome": "San Crispino in Fonteroma Brunello di Montalcino DOCG",
+        "img": "./assets/vinho1.webp",
+        "cost": "R$247,98",
+        "desc": "Vermelho-rubi intenso com reflexos granada",
+        "ano": "2014",
+        "nacionalidade":  "Italiano"
+    },
+    "vinho2": {
+        "nome": "Alísios Pinot Grigio",
+        "img": "./assets/vinho2.webp",
+        "cost": "R$156,49",
+        "desc": "Amarelo palha com tons de verde",
+        "ano": "2023",
+        "nacionalidade":  "Brasil"
+    },
+    "vinho3": {
+        "nome": "Leopard’s Leap Cabernet Sauvignon Western Cape W.O.",
+        "img": "./assets/vinho3.jpg",
+        "cost": "R$114,99",
+        "desc": "Aromas de frutas vermelhas, como amora, cassis e groselha vermelha, com notas de pimentão vermelho e baunilha",
+        "ano": "1999",
+        "nacionalidade":  "África do Sul"
+    },
+    "vinho4": {
+        "nome": "Punta Negra Reserva Malbec Single Vineyard",
+        "img": "./assets/vinho4.webp",
+        "cost": "R$64,49",
+        "desc": "Vermelho-rubi intenso com reflexos violáceos",
+        "ano": "1986",
+        "nacionalidade":  "Austrália"
+    },
+    "vinho5": {
+        "nome": "Vinho5",
+        "img": "./assets/vinho5.webp",
+        "cost": "R$v5",
+        "desc": "Descrição  vinho5",
+        "ano": "Ano vinho5",
+        "nacionalidade":  "Nacionalidadde vinho5"
+    }
+}

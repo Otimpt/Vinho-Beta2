@@ -3,4 +3,6 @@ Aplicativo de loja de vinhos desenvolvido em react native para projetos da facul
 https://snack.expo.dev/@gabrielserignolli/loja-de-vinhos
 
 
-![Imagem design tela inicial](https://github.com/joaovitor022/LojaDeVinhos/blob/main/Projeto%20em%20v%C3%ADdeo/Embed%20-%20Google%20Chrome%202023-11-26%2021-37-07.mp4)
+
+https://github.com/joaovitor022/LojaDeVinhos/assets/137309600/2d16f6b8-19e4-48f5-96a3-1d338b7cba74
+

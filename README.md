@@ -5,7 +5,11 @@ https://snack.expo.dev/@gabrielserignolli/loja-de-vinhos
 Explorando o código de maneira aprofundada
 
 
-https://github.com/joaovitor022/LojaDeVinhos/assets/137309600/a02647e8-3755-476b-8964-07107834fefb
+https://github.com/joaovitor022/LojaDeVinhos/assets/137309600/dc603b56-d1bd-457b-8a4a-a7cc4aad0c87
+
+
+
+
 
 
 

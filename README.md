@@ -1,5 +1,5 @@
 # LojaDeVinhos_Mobile
-Aplicativo de loja de vinhos desenvolvido em react native para projetos da faculdade
+Desenvolvi um aplicativo de loja de vinhos utilizando a tecnologia React Native, como parte dos projetos acadêmicos durante minha jornada na faculdade. Este aplicativo, meticulosamente construído, representa não apenas uma solução funcional, mas também uma demonstração prática do meu domínio em desenvolvimento de aplicativos móveis. Ao integrar os princípios do React Native, consegui criar uma experiência de usuário intuitiva e responsiva, permitindo que os usuários explorem uma variedade de vinhos e realizem compras de forma eficiente. Este projeto acadêmico não apenas aprimorou minhas habilidades técnicas, mas também me proporcionou a oportunidade de aplicar conceitos teóricos em um contexto prático e relevante, solidificando assim meu conhecimento no desenvolvimento de aplicativos móveis.
 https://snack.expo.dev/@gabrielserignolli/loja-de-vinhos
 
  ### Explorando o código de maneira aprofundada

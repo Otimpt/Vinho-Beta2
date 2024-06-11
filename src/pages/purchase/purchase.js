@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-
+import SQLite from 'react-native-sqlite-storage';
 import PaymentButton from '../componets/PaymentButton/index';
 
 function filtroDesc(desc){

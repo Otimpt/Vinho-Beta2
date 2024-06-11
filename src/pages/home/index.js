@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import SQLite from 'react-native-sqlite-storage';
 
+const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
+
 import Button from '../componets/Button';
 import Itens from '../componets/Itens';
 

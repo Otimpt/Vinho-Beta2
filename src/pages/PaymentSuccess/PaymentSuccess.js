@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import SQLite from 'react-native-sqlite-storage';
 export default function PaymentSuccess({ route, navigation }){
     const { item } = route.params || {};
 

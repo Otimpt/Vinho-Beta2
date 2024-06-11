@@ -28,7 +28,7 @@ export default function Harvest(){
     const vinho4 = vinho.vinho4;
 
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>Vinhos por safra</Text>
@@ -37,6 +37,7 @@ export default function Harvest(){
 
                 <Text style={styles.text}>2010 - 2020</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -63,12 +64,14 @@ export default function Harvest(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>2000 - 2010</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -95,12 +98,14 @@ export default function Harvest(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>1990 - 2000</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -127,12 +132,14 @@ export default function Harvest(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>1980 - 1990</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -159,12 +166,13 @@ export default function Harvest(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -200,5 +208,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderBottomColor: '#DDD',
         marginVertical: '2%'
-    }
+    },
+    horizontalScrollContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingHorizontal: 10,
+        marginBottom: 10,
+    },
 });

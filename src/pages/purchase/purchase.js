@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import SQLite from 'react-native-sqlite-storage';
 import PaymentButton from '../componets/PaymentButton/index';
 
-const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
+const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '../assets/ComprasFeitas.db' });
 function filtroDesc(desc){
   if(desc.length < 27){
       return desc;

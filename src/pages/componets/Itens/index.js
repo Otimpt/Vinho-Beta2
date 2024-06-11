@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import SQLite from 'react-native-sqlite-storage';
 function filtroDesc(desc){
   if(desc.length < 27){
       return desc;

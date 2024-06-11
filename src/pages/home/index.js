@@ -60,6 +60,20 @@ export default function Home() {
   const vinho3 = vinho.vinho3;
   const vinho4 = vinho.vinho4;
 
+  const exibirItensComprados = () => {
+    if (itensComprados.length === 0) {
+      return <Text>Nenhum item comprado</Text>;
+    }
+
+    return itensComprados.map((item, index) => (
+      <Text key={index}>{item.item}</Text>
+    ));
+  };
+
+  const exibirItensCompradosPage = () => {
+    navigation.navigate('ItensComprados');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -142,10 +156,8 @@ export default function Home() {
 
           <View style={styles.line}></View>
 
-          <Text style={styles.text}>Itens Comprados</Text>
-          {itensComprados.map((item, index) => (
-            <Text key={index}>{item.item}</Text>
-          ))}
+          <Button onPress={exibirItensCompradosPage} title="Itens Comprados" />
+
         </ScrollView>
       </View>
     </View>

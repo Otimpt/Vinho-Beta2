@@ -1,11 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect } from "react";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Button, Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import SQLite from 'react-native-sqlite-storage';
 
 const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
 
-import Button from '../componets/Button';
 import Itens from '../componets/Itens';
 
 import vinho from '../objects/item.json';
@@ -21,8 +20,11 @@ export default function Home() {
     navigation.navigate('Detail', { item, imagem });
   };
 
+  const [itensComprados, setItensComprados] = useState([]);
+
   useEffect(() => {
     initDatabase();
+    obterItensComprados();
   }, []);
 
   const initDatabase = () => {
@@ -32,6 +34,23 @@ export default function Home() {
         [],
         () => console.log('Tabela criada com sucesso'),
         (error) => console.log('Erro ao criar tabela', error)
+      );
+    });
+  };
+
+  const obterItensComprados = () => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        'SELECT * FROM compras',
+        [],
+        (_, { rows }) => {
+          const items = [];
+          for (let i = 0; i < rows.length; i++) {
+            items.push(rows.item(i));
+          }
+          setItensComprados(items);
+        },
+        (error) => console.log('Erro ao obter itens', error)
       );
     });
   };
@@ -54,12 +73,8 @@ export default function Home() {
         </View>
 
         <View style={styles.buttons}>
-          <Button onClick={() => navigation.navigate('Nationality')}>
-            Nacionalidades
-          </Button>
-          <Button onClick={() => navigation.navigate('Harvest')}>
-            Safras
-          </Button>
+          <Button onPress={() => navigation.navigate('Nationality')} title="Nacionalidades" />
+          <Button onPress={() => navigation.navigate('Harvest')} title="Safras" />
         </View>
 
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -127,6 +142,10 @@ export default function Home() {
 
           <View style={styles.line}></View>
 
+          <Text style={styles.text}>Itens Comprados</Text>
+          {itensComprados.map((item, index) => (
+            <Text key={index}>{item.item}</Text>
+          ))}
         </ScrollView>
       </View>
     </View>

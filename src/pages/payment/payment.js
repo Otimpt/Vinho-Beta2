@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 import SQLite from 'react-native-sqlite-storage';
 import PaymentSuccessButton from "../componets/PaymentSuccessButton/index";
 
+const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
 export default function Purchase({ route, navigation}){
     const { item, imagem } = route.params || {};
 

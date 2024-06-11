@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
-
+import SQLite from 'react-native-sqlite-storage';
 import PaymentSuccessButton from "../componets/PaymentSuccessButton/index";
 
 export default function Purchase({ route, navigation}){

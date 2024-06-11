@@ -28,7 +28,7 @@ export default function Nationality(){
     const vinho4 = vinho.vinho4;
 
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>Vinhos por nacionalidade</Text>
@@ -37,6 +37,7 @@ export default function Nationality(){
 
                 <Text style={styles.text}>Chileno</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -63,12 +64,14 @@ export default function Nationality(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>Argentino</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -95,12 +98,14 @@ export default function Nationality(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>Francês</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -127,12 +132,14 @@ export default function Nationality(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
                 <Text style={styles.text}>Espanhol</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <View style={styles.horizontalScrollContainer}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -159,12 +166,13 @@ export default function Nationality(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
+                    </View>
                 </ScrollView>
 
                 <View style={styles.line}></View>
 
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -200,5 +208,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderBottomColor: '#DDD',
         marginVertical: '2%'
-    }
+    },
+    horizontalScrollContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingHorizontal: 10,
+        marginBottom: 10,
+    },
 });

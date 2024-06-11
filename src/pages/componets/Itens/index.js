@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import SQLite from 'react-native-sqlite-storage';
 
-const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
+const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '../assets/ComprasFeitas.db' });
 function filtroDesc(desc){
   if(desc.length < 27){
       return desc;

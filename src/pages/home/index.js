@@ -15,8 +15,6 @@ import vinhoImg2 from '../assets/vinho2.webp';
 import vinhoImg3 from '../assets/vinho3.jpg';
 import vinhoImg4 from '../assets/vinho4.webp';
 
-const db = SQLite.openDatabase({ name: 'ComprasFeitas.db', createFromLocation: '~ComprasFeitas.db' });
-
 export default function Home() {
   const navigation = useNavigation();
   const navigateToDetail = (item, imagem) => {
